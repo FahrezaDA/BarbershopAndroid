@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation ="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Silahkan Login dahulu untuk melanjutkan"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:textSize="18dp"
+            android:paddingBottom="15dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="2"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="15dp"
+                android:text="Masuk"
+                android:textAlignment="center"
+                android:textColor="#1C1A1A"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@drawable/form"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/user_logo"
+                android:hint="  Masukkan Username"
+                android:paddingLeft="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"></RelativeLayout>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="50dp"
+                android:background="@drawable/form"
+                android:drawableStart="@drawable/key"
+                android:hint="  Masukkan Password"
+                android:paddingLeft="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:paddingTop="25dp"></RelativeLayout>
+            <Button
+                android:id="@+id/loginform.xml"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="LOGIN"
+                android:backgroundTint="@color/teal_200"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"></RelativeLayout>
+            <EditText
+                android:id="@+id/daftar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Belum Punya Akun ?"
+                android:paddingTop="10dp"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:paddingLeft="15dp" />
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:text="Daftar Disini "
+                android:textStyle="bold|italic"
+                android:textAllCaps="false"
+                android:textColor="@color/teal_200" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
