@@ -2,15 +2,12 @@ package com.project.barbershop;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Handler;
-
-import com.project.barbershop.databinding.ActivityMainBinding;
 import com.project.barbershop.registrasi.activity.registrasi;
-
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 @Override

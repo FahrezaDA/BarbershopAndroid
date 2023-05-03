@@ -1,4 +1,4 @@
-package com.project.barbershop.registrasi.servis;
+package com.project.barbershop.registrasi.Servis;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

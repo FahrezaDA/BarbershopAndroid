@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.project.barbershop.R;
 import com.project.barbershop.registrasi.Response.R_registrasi;
 import com.project.barbershop.registrasi.interfaces.I_registrasi;
-import com.project.barbershop.registrasi.servis.servis;
+import com.project.barbershop.registrasi.Servis.servis;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
