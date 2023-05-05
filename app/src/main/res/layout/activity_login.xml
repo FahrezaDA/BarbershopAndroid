@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation ="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivitySatu">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                 android:layout_height="15dp"
                 android:paddingTop="25dp"></RelativeLayout>
             <Button
-                android:id="@+id/loginform.xml"
+                android:id="@+id/login"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

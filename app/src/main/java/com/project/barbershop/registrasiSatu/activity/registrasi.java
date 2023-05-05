@@ -1,4 +1,4 @@
-package com.project.barbershop.registrasi.activity;
+package com.project.barbershop.registrasiSatu.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,9 +8,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.project.barbershop.R;
-import com.project.barbershop.registrasi.Response.R_registrasi;
-import com.project.barbershop.registrasi.interfaces.I_registrasi;
-import com.project.barbershop.registrasi.Servis.servis;
+import com.project.barbershop.registrasiSatu.Response.R_registrasi;
+import com.project.barbershop.registrasiSatu.interfaces.I_registrasi;
+import com.project.barbershop.registrasiSatu.Servis.servis;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

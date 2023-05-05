@@ -1,4 +1,4 @@
-package com.project.barbershop.registrasi.Response;
+package com.project.barbershop.registrasiSatu.Response;
 
 public class R_registrasi {
     private String status;
