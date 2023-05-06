@@ -1,4 +1,4 @@
-package com.project.barbershop;
+package com.project.barbershop.registrasiSatu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.project.barbershop.R;
 import com.project.barbershop.registrasiSatu.activity.registrasi;
 
 public class MainActivitySatu extends AppCompatActivity {
