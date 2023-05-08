@@ -17,7 +17,7 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_height="120dp"
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="16dp"
             android:src="@drawable/logo"/>
@@ -39,8 +39,8 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:paddingTop="15dp"
+                android:layout_height="50dp"
+                android:paddingTop="10dp"
                 android:text="Masuk"
                 android:textAlignment="center"
                 android:textColor="#1C1A1A"
@@ -90,7 +90,7 @@
             <EditText
                 android:id="@+id/daftar"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="30dp"
                 android:text="Belum Punya Akun ?"
                 android:paddingTop="10dp"
                 android:background="@color/white"
