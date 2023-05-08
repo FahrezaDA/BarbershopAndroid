@@ -87,15 +87,16 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="130dp"></RelativeLayout>
+
             <EditText
                 android:id="@+id/daftar"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Belum Punya Akun ?"
-                android:paddingTop="10dp"
                 android:background="@color/white"
-                android:textAlignment="center"
-                android:paddingLeft="15dp" />
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Belum Punya Akun ?"
+                android:textAlignment="center" />
 
             <Button
                 android:layout_width="140dp"

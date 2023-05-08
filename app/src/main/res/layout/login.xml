@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:textAlignment="center"
+        android:textColor="#1C1A1A"
+        android:textSize="20dp"
+        android:text="Silakan Login Terlebih Dahulu" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="180dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="#1C1A1A"
+        android:textStyle="bold"
+        android:text="Masuk" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/form"
+        android:drawableStart="@drawable/user_logo"
+        android:hint="  Masukkan Username"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/form"
+        android:drawableStart="@drawable/key"
+        android:hint="  Masukkan Password"
+        android:paddingLeft="15dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="330dp"
+        android:text="LOGIN"
+        android:backgroundTint="@color/teal_200"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="150dp"
+        android:textAlignment="center"
+        android:textColor="#1C1A1A"
+        android:textSize="15dp"
+        android:text="Belum Punya Akun?" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginStart="150dp"
+        android:backgroundTint="@color/white"
+        android:text="Daftar Disini "
+        android:textAllCaps="false"
+        android:textColor="@color/teal_200" />
+</RelativeLayout>
