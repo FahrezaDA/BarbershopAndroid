@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".profile">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Profil"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/tx1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:textSize="17dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tx_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text view"
+        android:textSize="17dp"
+        android:layout_below="@+id/tx1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tx2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="alamat"
+        android:textSize="17dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tx_nama"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tx_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text view"
+        android:textSize="17dp"
+        android:layout_below="@+id/tx2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tx3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Telepon"
+        android:textSize="17dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tx_alamat"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tx_notlp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text view"
+        android:textSize="17dp"
+        android:layout_below="@+id/tx3"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tx4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="17dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tx_notlp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tx_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text view"
+        android:textSize="17dp"
+        android:layout_below="@+id/tx4"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:id="@+id/bt_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubah Password"
+        android:layout_below="@+id/tx_email"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="107dp"
+        />
+
+
+</RelativeLayout>
