@@ -8,7 +8,7 @@
     tools:context=".beranda">
 
     <Button
-        android:id="@+id/logout"
+        android:id="@+id/beranda"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

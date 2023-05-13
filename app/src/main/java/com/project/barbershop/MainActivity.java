@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        setContentView(R.layout.activity_main);
         session = getSharedPreferences("session_login", MODE_PRIVATE);
 
         if(session.contains("username")){
@@ -55,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         // panggil method cek_form untuk setiap EditText
         cek_form(username);
         cek_form(password);
+
     }
+
 
     void login() {
         if(username.getText().length() < 1) {
