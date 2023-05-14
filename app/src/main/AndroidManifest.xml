@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Tambahkan izin akses internet -->
     <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -14,20 +16,33 @@
         android:theme="@style/Theme.Barbershop"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <!-- Tambahkan network security config jika menggunakan HTTPS -->
+        <!-- <network-security-config>
+            <domain-config cleartextTrafficPermitted="false">
+                <domain includeSubdomains="true">your-server.com</domain>
+            </domain-config>
+        </network-security-config> -->
+
         <activity
-            android:name=".profile"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Barbershop.NoActionBar">
+            android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".RegistrasiActivity"> </activity>
+        <activity android:name=".LoginActivity"> </activity>
+
+
+
+
+<!--        <meta-data-->
+<!--            android:name="preloaded_fonts"-->
+<!--            android:resource="@array/preloaded_fonts" />-->
     </application>
 
 </manifest>
