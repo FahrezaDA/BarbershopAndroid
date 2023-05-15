@@ -62,13 +62,27 @@
             android:layout_height="10dp"></RelativeLayout>
 
         <EditText
+            android:id="@+id/r_email"
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:background="@drawable/form"
+            android:drawableStart="@drawable/smartphone"
+            android:hint="  Masukkan Email"
+            android:paddingLeft="15dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:paddingTop="25dp"></RelativeLayout>
+        <EditText
             android:id="@+id/r_password"
             android:layout_width="350dp"
             android:layout_gravity="center"
             android:layout_height="50dp"
             android:background="@drawable/form"
             android:drawableStart="@drawable/key"
-            android:hint="  Masukkan Password"
+            android:hint=" password"
             android:paddingLeft="15dp" />
 
         <RelativeLayout
@@ -76,27 +90,13 @@
             android:layout_height="15dp"
             android:paddingTop="25dp"></RelativeLayout>
         <EditText
-            android:id="@+id/alamat"
-            android:layout_width="350dp"
-            android:layout_gravity="center"
-            android:layout_height="50dp"
-            android:background="@drawable/form"
-            android:drawableStart="@drawable/alamat"
-            android:hint=" Alamat"
-            android:paddingLeft="15dp" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:paddingTop="25dp"></RelativeLayout>
-        <EditText
-            android:id="@+id/no_telpon"
+            android:id="@+id/r_alamat"
             android:layout_width="350dp"
             android:layout_gravity="center"
             android:layout_height="50dp"
             android:background="@drawable/form"
             android:drawableStart="@drawable/smartphone"
-            android:hint="  No Telpon"
+            android:hint="  alamat"
             android:paddingLeft="15dp" />
 
         <RelativeLayout
@@ -104,11 +104,12 @@
             android:layout_height="15dp"
             android:paddingTop="25dp"></RelativeLayout>
         <Button
-            android:id="@+id/btnRegistrasi"
+            android:id="@+id/btnSubmit"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="SUBMIT"
+            android:onClick="registerUser"
             android:backgroundTint="@color/teal_200"
             android:textAllCaps="false"
             android:textColor="@color/white" />
