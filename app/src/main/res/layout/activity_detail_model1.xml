@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".detailModel1">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="221dp"
+        android:layout_height="181dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gentlemencut" />
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategori :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dewasa"
+        android:textSize="14sp"
+        android:layout_below="@+id/textview1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Model :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textmodel1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gentlemen cut"
+        android:textSize="14sp"
+        android:layout_below="@+id/textview2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harga :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textmodel2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rp 25.000 - Rp 35.000"
+        android:textSize="14sp"
+        android:layout_below="@+id/textview3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textview4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textmodel3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sesuai namanya, gaya ini dapat memberikan tampilan rambut pria yang berkesan gentleman dan mempesona. Potongan rambut tipis berlapis pada sisi bawah dan samping kepala akan memamerkan tekstur rambut bergelombang di bagian atas yang indah. Gaya ini tentu memberikan pesona pria yang menarik hingga mudah mendapat perhatian wanita."
+        android:textSize="14sp"
+        android:layout_below="@+id/textview4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textmodel4"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Kembali"
+        />
+
+</RelativeLayout>

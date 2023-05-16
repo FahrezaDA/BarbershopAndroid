@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".detailModel6">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="221dp"
+        android:layout_height="181dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/permhair"/>
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategori :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dewasa"
+        android:textSize="14sp"
+        android:layout_below="@+id/textview1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Model :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textmodel1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Perm Hair Treatment"
+        android:textSize="14sp"
+        android:layout_below="@+id/textview2"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harga :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textmodel2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rp 50.000"
+        android:textSize="14sp"
+        android:layout_below="@+id/textview3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textview4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi :"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textmodel3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textmodel4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Membuat rambut menjadi kriting dengan metode perm akan membuat rambut terlihat kriting dengan natural. Model perm akan membuat kamu menjadi lebih trendy dan maskulin. Dengan gaya perm dijamin kamu akan lebih mudah menarik perhatian seseorang dengan gaya rambut kriting yang unik."
+        android:textSize="14sp"
+        android:layout_below="@+id/textview4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textmodel4"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Kembali"
+        />
+
+</RelativeLayout>
