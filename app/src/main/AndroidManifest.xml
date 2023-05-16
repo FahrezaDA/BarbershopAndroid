@@ -51,6 +51,7 @@
         </activity>
         <activity android:name=".LoginRegister.RegistrasiActivity" />
         <activity android:name=".servis.MyServerRequest"/>
+        <activity android:name=".profile"/>
         <activity android:name=".LoginRegister.LoginActivity" />
     </application>
 
