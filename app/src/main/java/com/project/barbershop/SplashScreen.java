@@ -7,6 +7,8 @@ import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.project.barbershop.LoginRegister.LoginActivity;
+
 public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);

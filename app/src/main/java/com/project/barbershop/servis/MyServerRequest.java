@@ -31,7 +31,7 @@ public class MyServerRequest {
 
     public void login(String username, String password, Response.Listener<String> successListener, Response.ErrorListener errorListener) {
         // URL endpoint untuk login
-        String url = "http://192.168.1.2/barbershop/public/api/login";
+        String url = "http://10.10.5.169/barbershop/public/api/login";
 
         // membuat objek RequestQueue untuk mengirim request ke server
         RequestQueue queue = Volley.newRequestQueue(context);

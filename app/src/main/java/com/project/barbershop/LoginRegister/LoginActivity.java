@@ -1,4 +1,4 @@
-package com.project.barbershop;
+package com.project.barbershop.LoginRegister;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.project.barbershop.R;
 import com.project.barbershop.servis.MyServerRequest;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_old);
+        setContentView(R.layout.activity_login);
 
         etUsername = findViewById(R.id.email);
         etPassword = findViewById(R.id.password);

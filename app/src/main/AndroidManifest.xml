@@ -15,22 +15,22 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".detailModel6"
+            android:name=".detailModel.detailModel6"
             android:exported="false" />
         <activity
-            android:name=".detailModel5"
+            android:name=".detailModel.detailModel5"
             android:exported="false" />
         <activity
-            android:name=".detailModel4"
+            android:name=".detailModel.detailModel4"
             android:exported="false" />
         <activity
-            android:name=".detailModel3"
+            android:name=".detailModel.detailModel3"
             android:exported="false" />
         <activity
-            android:name=".detailModel2"
+            android:name=".detailModel.detailModel2"
             android:exported="false" />
         <activity
-            android:name=".detailModel1"
+            android:name=".detailModel.detailModel1"
             android:exported="false" /> <!-- Tambahkan network security config jika menggunakan HTTPS -->
         <!--
  <network-security-config>
@@ -49,8 +49,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrasiActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginRegister.RegistrasiActivity" />
+        <activity android:name=".servis.MyServerRequest"/>
+        <activity android:name=".LoginRegister.LoginActivity" />
     </application>
 
 </manifest>

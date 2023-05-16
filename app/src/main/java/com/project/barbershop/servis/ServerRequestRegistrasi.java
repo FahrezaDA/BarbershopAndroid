@@ -31,7 +31,7 @@ public class ServerRequestRegistrasi {
 
     public void register(String name, String email, String password,String alamat,  Response.Listener<String> successListener, Response.ErrorListener errorListener) {
         // URL endpoint untuk registrasi
-        String url = "http://192.168.1.2/barbershop/public/api/register";
+        String url = "http://10.10.5.169/barbershop/public/api/register";
 
         // membuat objek StringRequest untuk melakukan request POST
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,

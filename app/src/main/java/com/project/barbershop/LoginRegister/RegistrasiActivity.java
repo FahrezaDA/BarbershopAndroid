@@ -1,4 +1,4 @@
-package com.project.barbershop;
+package com.project.barbershop.LoginRegister;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.project.barbershop.R;
 import com.project.barbershop.servis.ServerRequestRegistrasi;
 
 public class RegistrasiActivity extends AppCompatActivity {

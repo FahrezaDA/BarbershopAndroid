@@ -1,14 +1,16 @@
-package com.project.barbershop;
+package com.project.barbershop.detailModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class detailModel6 extends AppCompatActivity {
+import com.project.barbershop.R;
+
+public class detailModel4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_model6);
+        setContentView(R.layout.activity_detail_model4);
     }
 }
