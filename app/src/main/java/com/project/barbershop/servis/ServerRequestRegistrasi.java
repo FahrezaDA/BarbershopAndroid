@@ -43,7 +43,7 @@ public class ServerRequestRegistrasi {
                             boolean error = jsonResponse.getBoolean("success");
                             if (error) {
                                 // response dari server jika registrasi berhasil
-                                Intent intent = new Intent(context, profile.class);
+                                Intent intent = new Intent(context, LoginActivity.class);
                                 context.startActivity(intent);
                             } else {
                                 // response dari server jika registrasi gagal
