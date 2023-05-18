@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context=".profile">
+    tools:context=".ProfileActivity">
 
     <TextView
         android:id="@+id/text"

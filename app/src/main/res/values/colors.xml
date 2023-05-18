@@ -7,14 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="home">#1194AA</color>
-    <color name="cut">#C9379D</color>
-    <color name="order">#AE7EOF</color>
-    <color name="profile">#5B37B7</color>
-
-    <color name="home_20">#1194AA</color>
-    <color name="cut_20">#C9379D</color>
-    <color name="order_20">#AE7EOF</color>
-    <color name="profile_20">#5B37B7</color>
+    <color name="lavender">#8692f7</color>
+    <color name="grey">#d2d2d2</color>
 </resources>
