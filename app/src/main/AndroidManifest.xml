@@ -49,9 +49,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginRegister.RegistrasiActivity" />
         <activity android:name=".servis.MyServerRequest"/>
-        <activity android:name=".profile"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".ListPemesananActivity"/>
+        <activity android:name=".BookingActivity1"/>
         <activity android:name=".LoginRegister.LoginActivity" />
     </application>
 

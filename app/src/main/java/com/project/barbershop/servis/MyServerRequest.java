@@ -11,7 +11,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.project.barbershop.profile;
+import com.project.barbershop.MainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,7 +31,7 @@ public class MyServerRequest {
 
     public void login(String username, String password, Response.Listener<String> successListener, Response.ErrorListener errorListener) {
         // URL endpoint untuk login
-        String url = "http://10.10.5.169/barbershop/public/api/login";
+        String url = "http://192.168.1.36/barbershop/public/api/login";
 
         // membuat objek RequestQueue untuk mengirim request ke server
         RequestQueue queue = Volley.newRequestQueue(context);
@@ -46,8 +46,9 @@ public class MyServerRequest {
                             boolean error = jsonResponse.getBoolean("success");
                             if (error) {
                                 // response dari server jika login berhasil
-                                Intent intent = new Intent(context, profile.class);
+                                Intent intent = new Intent(context, MainActivity.class);
                                 context.startActivity(intent);
+
                             } else {
                                 // response dari server jika login gagal
                                 Toast.makeText(context, "Login gagal", Toast.LENGTH_SHORT).show();

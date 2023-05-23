@@ -66,6 +66,7 @@
                 android:layout_width="350dp"
                 android:layout_gravity="center"
                 android:layout_height="50dp"
+                android:inputType="textPassword"
                 android:background="@drawable/form"
                 android:drawableStart="@drawable/key"
                 android:hint="  Masukkan Password"
