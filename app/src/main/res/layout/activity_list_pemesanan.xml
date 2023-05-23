@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListPemesananActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".listBooking.PesananActivity">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_data"
+    <ListView
+        android:id="@+id/listPesanan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/card_item"
-        />
+        android:layout_height="match_parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
