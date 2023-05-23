@@ -16,21 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Id"
-            android:visibility="gone"/>
+            />
 
         <TextView
-            android:id="@+id/tv_nama"
+            android:id="@+id/tv_model"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama"
-            android:textSize="22dp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/tv_harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Harga"
+            android:text="jenis_pelayanan"
             android:textSize="19dp"/>
 
         <TextView
@@ -41,40 +33,20 @@
             android:textSize="19dp" />
 
         <TextView
-            android:id="@+id/tv_stats"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="status"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/tv_model"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="jenis_pelayanan"
-            android:textSize="19dp"/>
-
-        <TextView
-            android:id="@+id/tv_notelp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No Telp"
-            android:textSize="19dp"/>
-
-        <TextView
             android:id="@+id/tv_jam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="jam booking"
             android:textSize="19dp"/>
 
+
         <TextView
-            android:id="@+id/tv_bukti"
+            android:id="@+id/tv_stats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bukti"
-            android:textSize="19dp"/>
+            android:text="status"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
