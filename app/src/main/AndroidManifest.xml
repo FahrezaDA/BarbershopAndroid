@@ -4,6 +4,10 @@
     <!-- Tambahkan izin akses internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -40,22 +44,31 @@
         </network-security-config>
         -->
         <activity
-            android:name=".SplashScreen"
+            android:name=".BookingActivity1"
             android:exported="true"
             android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginRegister.RegistrasiActivity" />
-        <activity android:name=".servis.MyServerRequest"/>
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".ListPemesananActivity"/>
-        <activity android:name=".BookingActivity1"/>
-        <activity android:name=".LoginRegister.LoginActivity" />
+<!--        <activity-->
+<!--            android:name=".SplashScreen"-->
+<!--            android:exported="true"-->
+<!--            android:windowSoftInputMode="adjustPan|stateHidden">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+<!--        <activity android:name=".MainActivity" />-->
+<!--        <activity android:name=".LoginRegister.RegisterActivity" />-->
+<!--        <activity android:name=".servis.MyServerRequest"/>-->
+<!--        <activity android:name=".ProfileActivity"/>-->
+<!--        <activity android:name=".ListPemesananActivity"/>-->
+<!--        <activity android:name=".BookingActivity1"/>-->
+<!--        <activity android:name=".LoginRegister.LoginActivity" />-->
     </application>
 
 </manifest>

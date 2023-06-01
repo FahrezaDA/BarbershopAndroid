@@ -15,31 +15,30 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.project.barbershop.MainActivity;
 import com.project.barbershop.R;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginActivity extends AppCompatActivity {
-    private static final String url = "http://192.168.1.6/barbershopLaravel/public/api/login";
+public class RegisterActivity extends AppCompatActivity {
+    private static final String REGISTER_URL = "http://192.168.1.6/barbershopLaravel/public/api/register";
 
-
+    private EditText etname;
     private EditText etEmail;
-    private EditText etPassword;
+    private EditText etPassword,etAlamat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registrasi);
 
+        etname = findViewById(R.id.r_username);
+        etEmail = findViewById(R.id.r_email);
+        etPassword = findViewById(R.id.r_password);
+        etAlamat = findViewById(R.id.r_alamat);
 
-        etEmail = findViewById(R.id.email);
-        etPassword = findViewById(R.id.password);
-
-
-        Button btnLogin = findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        Button btnRegister = findViewById(R.id.btnSubmit);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 registerUser();
@@ -48,19 +47,19 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void registerUser() {
-
+        final String name = etname.getText().toString().trim();
         final String email = etEmail.getText().toString().trim();
         final String password = etPassword.getText().toString().trim();
-
+        final String alamat = etPassword.getText().toString().trim();
 
         // Buat request POST ke URL REGISTER_URL
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         // Tanggapan dari server jika pendaftaran berhasil
-                        Toast.makeText(LoginActivity.this,"Registrasi berhasil", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Toast.makeText(RegisterActivity.this, "Registrasi berhasil", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -69,16 +68,16 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // Tanggapan dari server jika terjadi kesalahan
-                        Toast.makeText(LoginActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-
+                params.put("name", name);
                 params.put("email", email);
                 params.put("password", password);
-
+                params.put("alamat", alamat);
                 return params;
             }
         };

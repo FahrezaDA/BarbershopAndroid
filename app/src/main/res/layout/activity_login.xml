@@ -77,7 +77,7 @@
                 android:layout_height="15dp"
                 android:paddingTop="25dp"></RelativeLayout>
             <Button
-                android:id="@+id/login"
+                android:id="@+id/btnLogin"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
