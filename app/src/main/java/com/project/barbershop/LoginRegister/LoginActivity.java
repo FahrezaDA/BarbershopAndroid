@@ -15,16 +15,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.project.barbershop.MainActivity;
+import com.project.barbershop.BookingActivity1;
 import com.project.barbershop.R;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String url = "http://192.168.1.6/barbershopLaravel/public/api/login";
-
-
+    private static final String url = "http://192.168.1.5/barbershopLaravel/public/api/login";
+    private  Button btnRegister;
+   private  Button btnLogin;
     private EditText etEmail;
     private EditText etPassword;
 
@@ -33,21 +33,30 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+        btnRegister=findViewById(R.id.btnRegister);
+        btnLogin=findViewById(R.id.btnLogin);
         etEmail = findViewById(R.id.email);
         etPassword = findViewById(R.id.password);
-
 
         Button btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registerUser();
+                loginUser();
+            }
+        });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
 
-    private void registerUser() {
+    private void loginUser() {
 
         final String email = etEmail.getText().toString().trim();
         final String password = etPassword.getText().toString().trim();
@@ -60,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         // Tanggapan dari server jika pendaftaran berhasil
                         Toast.makeText(LoginActivity.this,"Registrasi berhasil", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, BookingActivity1.class);
                         startActivity(intent);
                         finish();
                     }

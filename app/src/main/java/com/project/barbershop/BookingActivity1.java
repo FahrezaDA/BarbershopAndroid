@@ -47,6 +47,7 @@ public class BookingActivity1 extends AppCompatActivity {
 
     private Button choose;
     private Spinner spinner;
+    private Spinner spinner2;
     String encodeImageString;
     private Calendar calendar;
 
@@ -68,6 +69,15 @@ public class BookingActivity1 extends AppCompatActivity {
 
         // Buat array opsi jam
         String[] jamOptions = {"Jam 1", "Jam 2", "Jam 3"};
+
+
+
+        //spinner jenis pelayanan
+        spinner2 = findViewById(R.id.spinner_jenis_pelayanan);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.jenis_pelayanan_options, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(adapter2);
 
         // Buat adapter untuk Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, jamOptions);
@@ -94,7 +104,6 @@ public class BookingActivity1 extends AppCompatActivity {
         etName = findViewById(R.id.username);
         etNoTelpon = findViewById(R.id.no_telpon);
         etHarga = findViewById(R.id.harga);
-        etJenisPelayanan = findViewById(R.id.jenis_pelayanan);
         btnSubmit = findViewById(R.id.btnSubmit);
         btnTglBooking = findViewById(R.id.btnTglBooking);
         choose = findViewById(R.id.choose);
@@ -192,7 +201,7 @@ public class BookingActivity1 extends AppCompatActivity {
     private void bookingUser() {
         final String nama = etName.getText().toString().trim();
         final String no_telpon = etNoTelpon.getText().toString().trim();
-        final String jenis_pelayanan = etJenisPelayanan.getText().toString().trim();
+        final String jenis_pelayanan = spinner2.getSelectedItem().toString().trim();
         final String harga = etHarga.getText().toString().trim();
         final String tanggal_booking = btnTglBooking.getText().toString().trim();
         final String jam_booking = spinner.getSelectedItem().toString().trim();

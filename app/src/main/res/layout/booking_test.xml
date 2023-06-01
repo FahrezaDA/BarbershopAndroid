@@ -76,15 +76,16 @@
             android:layout_height="15dp"
             android:paddingTop="25dp"></RelativeLayout>
 
-        <EditText
-            android:id="@+id/jenis_pelayanan"
+        <Spinner
+            android:id="@+id/spinner_jenis_pelayanan"
             android:layout_width="350dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:background="@drawable/form"
             android:drawableStart="@drawable/key"
             android:hint=" jenis_pelayanan"
-            android:paddingLeft="15dp" />
+            android:paddingLeft="15dp"
+            android:entries="@array/jenis_pelayanan_options"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -100,36 +101,58 @@
             android:hint="  Harga"
             android:paddingLeft="15dp" />
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="15dp"
-            android:paddingTop="25dp"></RelativeLayout>
+            android:paddingTop="25dp"
+            android:orientation="horizontal">
 
 
-        <Button
-            android:id="@+id/btnTglBooking"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/teal_200"
-            android:onClick="showDatePicker"
-            android:text="Pilih tanggal booking"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnTglBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="35dp"
+                android:backgroundTint="@color/teal_200"
+                android:onClick="showDatePicker"
+                android:text="Pilih tanggal booking"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Spinner
                 android:id="@+id/jam_booking"
-                android:layout_width="250dp"
-                android:layout_marginStart="30dp"
+                android:layout_width="100dp"
+                android:layout_marginStart="15dp"
                 android:layout_height="50dp"
                 android:background="@drawable/form"
                 android:drawableStart="@drawable/smartphone"
                 android:hint="  Jam_booking"
+                android:paddingLeft="15dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_marginStart="30dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/smartphone"
+                android:hint="Bukti Transfer "
                 android:paddingLeft="15dp" />
 
 

@@ -44,7 +44,7 @@
         </network-security-config>
         -->
         <activity
-            android:name=".BookingActivity1"
+            android:name=".LoginRegister.LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
@@ -63,11 +63,11 @@
 <!--        </activity>-->
 
 <!--        <activity android:name=".MainActivity" />-->
-<!--        <activity android:name=".LoginRegister.RegisterActivity" />-->
+        <activity android:name=".LoginRegister.RegisterActivity" />
 <!--        <activity android:name=".servis.MyServerRequest"/>-->
 <!--        <activity android:name=".ProfileActivity"/>-->
 <!--        <activity android:name=".ListPemesananActivity"/>-->
-<!--        <activity android:name=".BookingActivity1"/>-->
+        <activity android:name=".BookingActivity1"/>
 <!--        <activity android:name=".LoginRegister.LoginActivity" />-->
     </application>
 

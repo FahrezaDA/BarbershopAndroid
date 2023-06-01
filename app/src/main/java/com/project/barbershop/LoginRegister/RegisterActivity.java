@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
-    private static final String REGISTER_URL = "http://192.168.1.6/barbershopLaravel/public/api/register";
+    private static final String REGISTER_URL = "http://192.168.1.5/barbershopLaravel/public/api/register";
 
     private EditText etname;
     private EditText etEmail;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jenis_pelayanan_options">
+        <item>Gentlemen Cut</item>
+        <item>Smoothing</item>
+        <item>Black Hair Coloring</item>
+        <item>Grooming and Hair Tattoo</item>
+        <item>Hair Coloring</item>
+    </string-array>
+</resources>
