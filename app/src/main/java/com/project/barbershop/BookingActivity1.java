@@ -73,11 +73,49 @@ public class BookingActivity1 extends AppCompatActivity {
 
 
         //spinner jenis pelayanan
-        spinner2 = findViewById(R.id.spinner_jenis_pelayanan);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+        Spinner spinnerJenisPelayanan = findViewById(R.id.spinner_jenis_pelayanan);
+        ArrayAdapter<CharSequence> adapterJenisPelayanan = ArrayAdapter.createFromResource(this,
                 R.array.jenis_pelayanan_options, android.R.layout.simple_spinner_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter2);
+        adapterJenisPelayanan.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerJenisPelayanan.setAdapter(adapterJenisPelayanan);
+
+        spinnerJenisPelayanan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String pilihan = parent.getItemAtPosition(position).toString();
+                String harga = "";
+
+                switch (pilihan) {
+                    case "Gentlemen Cut":
+                        harga = "Rp100.000";
+                        break;
+                    case "Smoothing":
+                        harga = "Rp200.000";
+                        break;
+                    case "Black Hair Coloring":
+                        harga = "Rp300.000";
+                        break;
+                    case "Grooming and Hair Tattoo":
+                        harga = "Rp400.000";
+                        break;
+                    case "Hair Coloring":
+                        harga = "Rp500.000";
+                        break;
+                }
+
+                etHarga.setText(harga);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Tidak ada yang dipilih, tidak ada tindakan yang diambil.
+            }
+        });
+
+
+
+
+
 
         // Buat adapter untuk Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, jamOptions);

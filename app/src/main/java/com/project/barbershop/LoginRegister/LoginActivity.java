@@ -15,14 +15,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.project.barbershop.BookingActivity1;
+import com.project.barbershop.ProfileActivity;
 import com.project.barbershop.R;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String url = "http://192.168.1.5/barbershopLaravel/public/api/login";
+    private static final String url = "http://192.168.1.9/barbershopLaravel/public/api/login";
     private  Button btnRegister;
    private  Button btnLogin;
     private EditText etEmail;
@@ -68,8 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Tanggapan dari server jika pendaftaran berhasil
-                        Toast.makeText(LoginActivity.this,"Registrasi berhasil", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, BookingActivity1.class);
+                        Toast.makeText(LoginActivity.this,"Login berhasil", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                         startActivity(intent);
                         finish();
                     }

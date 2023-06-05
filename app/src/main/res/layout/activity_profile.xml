@@ -14,7 +14,7 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data Profil"
+        android:text="Cari Data Diri Anda"
         android:textSize="21dp"
         android:textStyle="bold"
         android:layout_marginTop="60dp"
@@ -23,110 +23,120 @@
         android:textAlignment="center"
         />
     <TextView
-        android:id="@+id/tx1"
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:text="Email"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/profile_email"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="20dp"
+        android:minHeight="48dp"
+        android:hint="..."
+
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_email"
+        android:layout_toEndOf="@+id/profile_email"
+        android:layout_marginStart="8dp"
+        android:text="Search" />
+
+    <TextView
+        android:id="@+id/tv_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama"
+        android:layout_below="@+id/profile_email"
         android:textSize="17dp"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="17dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/tx_nama"
+    <EditText
+        android:id="@+id/profile_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="text view"
-        android:textSize="17dp"
-        android:layout_below="@+id/tx1"
-        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_nama"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        />
+        android:minHeight="48dp"
+        android:hint=" ... "
+        android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/tx2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="alamat"
-        android:textSize="17dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_below="@+id/tx_nama"
-        android:layout_marginTop="15dp"
-        android:textStyle="bold"
-        />
-
-    <TextView
-        android:id="@+id/tx_alamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="text view"
-        android:textSize="17dp"
-        android:layout_below="@+id/tx2"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        />
-
-    <TextView
-        android:id="@+id/tx3"
+        android:id="@+id/tv_noTelpon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No Telepon"
         android:textSize="17dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@+id/tx_alamat"
+        android:layout_below="@+id/profile_nama"
         android:layout_marginTop="15dp"
         android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/tx_notlp"
+    <EditText
+        android:id="@+id/profile_noTelpon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="text view"
-        android:textSize="17dp"
-        android:layout_below="@+id/tx3"
-        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_noTelpon"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        />
+        android:minHeight="48dp"
+        android:hint="..."
+        android:textSize="17dp" />
 
     <TextView
-        android:id="@+id/tx4"
+        android:id="@+id/tv_alamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="Alamat"
         android:textSize="17dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@+id/tx_notlp"
+        android:layout_below="@+id/profile_noTelpon"
         android:layout_marginTop="15dp"
         android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/tx_email"
+    <EditText
+        android:id="@+id/profile_alamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="text view"
-        android:textSize="17dp"
-        android:layout_below="@+id/tx4"
-        android:layout_marginTop="15dp"
+        android:layout_below="@+id/tv_alamat"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        />
+        android:hint="..."
+        android:minHeight="48dp"
+        android:textSize="17dp" />
 
     <Button
-        android:id="@+id/bt_password"
+        android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ubah Password"
-        android:layout_below="@+id/tx_email"
+        android:text="Update Data"
+        android:layout_below="@+id/profile_alamat"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="107dp"
         />
