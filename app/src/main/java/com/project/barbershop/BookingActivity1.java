@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class BookingActivity1 extends AppCompatActivity {
 
-    private static final String url = "http://192.168.1.5/barbershopLaravel/public/api/postBooking";
+    private static final String url = "http://192.168.1.9/barbershopLaravel/public/api/postBooking";
 
     private EditText etName, etNoTelpon, etJenisPelayanan, etHarga;
     private Button btnSubmit;
@@ -65,21 +65,19 @@ public class BookingActivity1 extends AppCompatActivity {
         setContentView(R.layout.booking_test);
 
         spinner = findViewById(R.id.jam_booking);
-
-
         // Buat array opsi jam
         String[] jamOptions = {"Jam 1", "Jam 2", "Jam 3"};
 
 
 
         //spinner jenis pelayanan
-        Spinner spinnerJenisPelayanan = findViewById(R.id.spinner_jenis_pelayanan);
+        spinner2 = findViewById(R.id.spinner_jenis_pelayanan);
         ArrayAdapter<CharSequence> adapterJenisPelayanan = ArrayAdapter.createFromResource(this,
                 R.array.jenis_pelayanan_options, android.R.layout.simple_spinner_item);
         adapterJenisPelayanan.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerJenisPelayanan.setAdapter(adapterJenisPelayanan);
+        spinner2.setAdapter(adapterJenisPelayanan);
 
-        spinnerJenisPelayanan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String pilihan = parent.getItemAtPosition(position).toString();

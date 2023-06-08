@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
-    private static final String REGISTER_URL = "http://192.168.1.5/barbershopLaravel/public/api/register";
+    private static final String REGISTER_URL = "http://192.168.1.9/barbershopLaravel/public/api/register";
 
     private EditText etname;
     private EditText etEmail;
@@ -74,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-                params.put("name", name);
+                params.put("nama", name);
                 params.put("email", email);
                 params.put("password", password);
                 params.put("alamat", alamat);

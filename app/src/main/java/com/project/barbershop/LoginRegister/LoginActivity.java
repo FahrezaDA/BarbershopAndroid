@@ -15,7 +15,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.project.barbershop.ProfileActivity;
+import com.project.barbershop.BookingActivity1;
+import com.project.barbershop.MainActivity;
 import com.project.barbershop.R;
 
 import java.util.HashMap;
@@ -49,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(LoginActivity.this, BookingActivity1.class);
                 startActivity(intent);
                 finish();
             }
@@ -69,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         // Tanggapan dari server jika pendaftaran berhasil
                         Toast.makeText(LoginActivity.this,"Login berhasil", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
                     }

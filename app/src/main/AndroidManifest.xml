@@ -44,7 +44,7 @@
         </network-security-config>
         -->
         <activity
-            android:name=".ProfileActivity"
+            android:name=".SplashScreen"
             android:exported="true"
             android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
@@ -62,13 +62,13 @@
 <!--            </intent-filter>-->
 <!--        </activity>-->
 
-<!--        <activity android:name=".MainActivity" />-->
-<!--        <activity android:name=".LoginRegister.RegisterActivity" />-->
-<!--        <activity android:name=".servis.MyServerRequest"/>-->
-<!--        <activity android:name=".ProfileActivity"/>-->
-<!--        <activity android:name=".ListPemesananActivity"/>-->
-<!--        <activity android:name=".BookingActivity1"/>-->
-<!--        <activity android:name=".LoginRegister.LoginActivity" />-->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginRegister.RegisterActivity" />
+        <activity android:name=".servis.MyServerRequest"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".ListPemesananActivity"/>
+        <activity android:name=".BookingActivity1"/>
+        <activity android:name=".LoginRegister.LoginActivity" />
     </application>
 
 </manifest>

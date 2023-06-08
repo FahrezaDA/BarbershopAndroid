@@ -1,5 +1,6 @@
 package com.project.barbershop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,12 +16,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ProfileActivity extends AppCompatActivity {
+
 
     private static final String TAG = ProfileActivity.class.getSimpleName();
     private EditText profileEmail, profileNama, profileNoTelpon, profileAlamat;
@@ -30,6 +33,9 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_booking);
 
         profileEmail = findViewById(R.id.profile_email);
         profileNama = findViewById(R.id.profile_nama);
@@ -55,6 +61,31 @@ public class ProfileActivity extends AppCompatActivity {
                 String alamat = profileAlamat.getText().toString().trim();
                 updateData(email, nama, noTelpon, alamat);
             }
+        });
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.bottom_home:
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_booking:
+                    startActivity(new Intent(getApplicationContext(), BookingActivity1.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+
+                case R.id.bottom_order:
+                    startActivity(new Intent(getApplicationContext(), ListPemesananActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_profile:
+                    return true;
+
+            }
+            return false;
         });
     }
 
@@ -147,4 +178,6 @@ public class ProfileActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonObjectRequest);
     }
+
+
 }
