@@ -63,12 +63,12 @@
 <!--        </activity>-->
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginRegister.RegisterActivity" />
-        <activity android:name=".servis.MyServerRequest"/>
-        <activity android:name=".ProfileActivity"/>
-        <activity android:name=".ListPemesananActivity"/>
-        <activity android:name=".BookingActivity1"/>
-        <activity android:name=".LoginRegister.LoginActivity" />
+        <activity android:name=".LoginRegister.RegisterActivity1" />
+<!--        <activity android:name=".servis.MyServerRequest"/>-->
+        <activity android:name=".ProfileActivity1"/>
+<!--        <activity android:name=".ListPemesananActivity"/>-->
+<!--        <activity android:name=".BookingActivity1"/>-->
+        <activity android:name=".LoginRegister.LoginActivity1" />
     </application>
 
 </manifest>

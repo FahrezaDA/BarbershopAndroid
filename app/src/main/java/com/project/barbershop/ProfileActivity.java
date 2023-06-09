@@ -39,9 +39,9 @@ public class ProfileActivity extends AppCompatActivity {
 
         profileEmail = findViewById(R.id.profile_email);
         profileNama = findViewById(R.id.profile_nama);
-        profileNoTelpon = findViewById(R.id.profile_noTelpon);
+        profileNoTelpon = findViewById(R.id.profile_noTelepon);
         profileAlamat = findViewById(R.id.profile_alamat);
-        btnSearch = findViewById(R.id.btn_search);
+
         btnUpdate = findViewById(R.id.btnUpdate);
 
         btnSearch.setOnClickListener(new View.OnClickListener() {

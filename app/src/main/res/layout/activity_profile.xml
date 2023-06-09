@@ -8,13 +8,14 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
+    android:background="@drawable/backutama"
     tools:context=".ProfileActivity">
 
     <TextView
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cari Data Diri Anda"
+        android:text="Data Profil"
         android:textSize="21dp"
         android:textStyle="bold"
         android:layout_marginTop="60dp"
@@ -22,6 +23,7 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         />
+
     <TextView
         android:id="@+id/tv_email"
         android:layout_width="match_parent"
@@ -36,7 +38,7 @@
 
     <EditText
         android:id="@+id/profile_email"
-        android:layout_width="235dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_email"
         android:layout_marginLeft="20dp"
@@ -44,17 +46,10 @@
         android:layout_marginRight="20dp"
         android:minHeight="48dp"
         android:hint="..."
-
+        android:background="@drawable/form"
         android:textSize="17dp" />
 
-    <Button
-        android:id="@+id/btn_search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/profile_email"
-        android:layout_toEndOf="@+id/profile_email"
-        android:layout_marginStart="8dp"
-        android:text="Search" />
+
 
     <TextView
         android:id="@+id/tv_nama"
@@ -78,7 +73,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
         android:minHeight="48dp"
-        android:hint=" ... "
+        android:background="@drawable/form"
         android:textSize="17dp" />
 
     <TextView
@@ -95,7 +90,7 @@
         />
 
     <EditText
-        android:id="@+id/profile_noTelpon"
+        android:id="@+id/profile_noTelepon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_noTelpon"
@@ -103,7 +98,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
         android:minHeight="48dp"
-        android:hint="..."
+        android:background="@drawable/form"
         android:textSize="17dp" />
 
     <TextView
@@ -114,7 +109,7 @@
         android:textSize="17dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@+id/profile_noTelpon"
+        android:layout_below="@+id/profile_noTelepon"
         android:layout_marginTop="15dp"
         android:textStyle="bold"
         />
@@ -127,7 +122,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:hint="..."
+        android:background="@drawable/form"
         android:minHeight="48dp"
         android:textSize="17dp" />
 
@@ -138,6 +133,7 @@
         android:text="Update Data"
         android:layout_below="@+id/profile_alamat"
         android:layout_marginTop="30dp"
+        android:backgroundTint="@color/purple_700"
         android:layout_marginLeft="107dp"
         />
 

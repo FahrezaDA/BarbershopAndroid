@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e3e4df"
+    android:background="@drawable/backutama"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -57,7 +57,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:background="#FF018786"
+            android:background="#025464"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="10dp">
@@ -150,6 +150,7 @@
                             android:layout_alignParentBottom="true"
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="30dp"
+
                             android:src="@drawable/smotting" />
 
 

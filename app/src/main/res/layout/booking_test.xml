@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:orientation ="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/backutama"
     tools:context=".BookingActivity1">
 
     <LinearLayout
@@ -21,14 +22,16 @@
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="16dp"
             android:src="@drawable/logo"/>
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp"
             android:text="Silahkan Isi data diri sesuai dengan data diri"
             android:textAlignment="center"
+            android:textSize="12dp"
             android:textStyle="italic"
-            android:textSize="18dp"
-            android:paddingBottom="15dp"/>
+            tools:ignore="TextSizeCheck" />
 
         <TextView
             android:layout_width="match_parent"
@@ -39,8 +42,7 @@
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold" />
-    </LinearLayout>
-    <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_weight="2"
@@ -52,6 +54,7 @@
             android:layout_width="350dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:background="@drawable/form"
             android:drawableStart="@drawable/user_logo"
             android:hint="  Masukkan Nama"
@@ -118,13 +121,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="ExtraText">
+
             <Button
                 android:id="@+id/btnTglBooking"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginStart="35dp"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/purple_700"
                 android:onClick="showDatePicker"
                 android:text="Pilih tanggal booking"
                 android:textAllCaps="false"
@@ -137,7 +142,6 @@
                 android:layout_marginStart="15dp"
                 android:background="@drawable/form"
                 android:drawableStart="@drawable/kalender"
-                android:hint="  Jam_booking"
                 android:paddingLeft="15dp" />
 
         </LinearLayout>
@@ -151,7 +155,7 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/white"
+
                 android:drawableStart="@drawable/nota"
                 android:hint="Bukti Transfer "
                 android:paddingLeft="15dp" />
@@ -164,7 +168,7 @@
                 android:layout_marginStart="15dp"
                 android:text="choose"
                 android:layout_marginTop="5dp"
-                android:backgroundTint="@color/grey"
+                android:backgroundTint="@color/white"
                 android:textAllCaps="false"
                 android:textColor="@color/black" />
 
@@ -178,7 +182,7 @@
             android:layout_marginTop="20dp"
             android:text="SUBMIT"
             android:onClick="bookingUser"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/purple_700"
             android:textAllCaps="false"
             android:textColor="@color/white" />
 
