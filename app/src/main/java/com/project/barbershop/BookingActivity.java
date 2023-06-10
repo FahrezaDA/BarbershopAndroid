@@ -71,18 +71,17 @@ public class BookingActivity extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
-                case R.id.bottom_booking:
-                    startActivity(new Intent(getApplicationContext(), BookingActivity1.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                    return true;
-
                 case R.id.bottom_order:
                     startActivity(new Intent(getApplicationContext(), BookingActivity.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
+                case R.id.bottom_booking:
+                    return true;
                 case R.id.bottom_profile:
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity1.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
                     return true;
 
             }
