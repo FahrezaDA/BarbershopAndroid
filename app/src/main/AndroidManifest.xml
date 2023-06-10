@@ -70,6 +70,8 @@
         <activity android:name=".BookingActivity1"/>
         <activity android:name=".BookingActivity"/>
         <activity android:name=".LoginRegister.LoginActivity1" />
+        <activity android:name=".booking_test"/>
+        <activity android:name=".ProfileActivity"/>
     </application>
 
 </manifest>
