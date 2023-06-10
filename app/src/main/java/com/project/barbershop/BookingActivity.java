@@ -1,6 +1,7 @@
 package com.project.barbershop;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.json.JSONObject;
 
@@ -36,6 +38,9 @@ public class BookingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_booking);
 
         dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         requestQueue = Volley.newRequestQueue(this);
@@ -59,7 +64,33 @@ public class BookingActivity extends AppCompatActivity {
                 performSearch();
             }
         });
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.bottom_home:
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_booking:
+                    startActivity(new Intent(getApplicationContext(), BookingActivity1.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+
+                case R.id.bottom_order:
+                    startActivity(new Intent(getApplicationContext(), BookingActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_profile:
+                    return true;
+
+            }
+            return false;
+        });
+
     }
+
 
     private void showDatePicker() {
         final Calendar newCalendar = Calendar.getInstance();

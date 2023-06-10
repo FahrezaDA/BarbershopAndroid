@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class BookingActivity1 extends AppCompatActivity {
 
-    private static final String url = "http://192.168.1.20/barbershopLaravel/public/api/postBooking";
+    private static final String url = "http://192.168.1.12/barbershopLaravel/public/api/postBooking";
 
     private EditText etName, etNoTelpon, etJenisPelayanan, etHarga;
     private Button btnSubmit;

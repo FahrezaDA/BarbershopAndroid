@@ -28,7 +28,7 @@ public class booking_test extends AppCompatActivity {
                 case R.id.bottom_order:
                     return true;
                 case R.id.bottom_profile:
-                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity1.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
