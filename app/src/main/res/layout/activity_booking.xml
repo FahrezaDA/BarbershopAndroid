@@ -116,7 +116,7 @@
                             android:src="@drawable/perm" />
 
                         <Button
-                            android:id="@+id/bottom_booking1"
+                            android:id="@+id/btnSatu"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginLeft="250dp"
@@ -212,7 +212,7 @@
                             android:src="@drawable/perm" />
 
                         <Button
-                            android:id="@+id/bottom_booking2"
+                            android:id="@+id/btnDua"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginLeft="250dp"
@@ -307,7 +307,7 @@
                             android:src="@drawable/perm" />
 
                         <Button
-                            android:id="@+id/bottom_booking3"
+                            android:id="@+id/btnTiga"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginLeft="250dp"

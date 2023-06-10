@@ -26,6 +26,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class BookingActivity extends AppCompatActivity {
+    Button btnSatu, btnDua, btnTiga;
 
     private Button btnTglBookings, btnSearch;
     private TextView tvStatus1, tvStatus2, tvStatus3;
@@ -38,6 +39,34 @@ public class BookingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
+
+        btnSatu = (Button) findViewById(R.id.btnSatu);
+        btnDua = (Button) findViewById(R.id.btnDua);
+        btnTiga = (Button) findViewById(R.id.btnTiga);
+
+        btnSatu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent BukaActSatu = new Intent(getApplicationContext(), BookingActivity1.class);
+                startActivity(BukaActSatu);
+            }
+        });
+
+        btnDua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent BukaActDua = new Intent(getApplicationContext(), BookingActivity1.class);
+                startActivity(BukaActDua);
+            }
+        });
+
+        btnTiga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent BukaActTiga = new Intent(getApplicationContext(), BookingActivity1.class);
+                startActivity(BukaActTiga);
+            }
+        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.bottom_booking);
