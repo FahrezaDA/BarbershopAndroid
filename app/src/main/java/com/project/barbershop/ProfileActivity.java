@@ -77,7 +77,7 @@ public class ProfileActivity extends AppCompatActivity {
                     return true;
 
                 case R.id.bottom_order:
-                    startActivity(new Intent(getApplicationContext(), ListPemesananActivity.class));
+                    startActivity(new Intent(getApplicationContext(), booking_test.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
