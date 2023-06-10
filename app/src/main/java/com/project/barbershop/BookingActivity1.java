@@ -188,6 +188,12 @@ public class BookingActivity1 extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
+                case R.id.bottom_booking1:
+                    return true;
+                case R.id.bottom_booking2:
+                    return true;
+                case R.id.bottom_booking3:
+                    return true;
             }
             return false;
         });
