@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String url = "http://192.168.1.9/barbershopLaravel/public/api/login";
+    private static final String url = "http://192.168.1.20/barbershopLaravel/public/api/login";
     private  Button btnRegister;
    private  Button btnLogin;
     private EditText etEmail;

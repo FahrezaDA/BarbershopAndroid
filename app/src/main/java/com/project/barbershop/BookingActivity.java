@@ -30,7 +30,7 @@ public class BookingActivity extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private RequestQueue requestQueue;
-    private String apiUrl = "http://192.168.1.9/barbershopLaravel/public/api/searchBooking";
+    private String apiUrl = "http://192.168.1.20/barbershopLaravel/public/api/searchBooking";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class BookingActivity extends AppCompatActivity {
                 String selectedDate = dateFormatter.format(selectedCalendar.getTime());
                 btnTglBookings.setText(selectedDate);
             }
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+        }, newCalendar.get(Calendar.DAY_OF_MONTH), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.YEAR));
 
         datePickerDialog.show();
     }

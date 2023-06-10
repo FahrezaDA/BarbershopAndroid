@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.project.barbershop.ProfileActivity1;
+import com.project.barbershop.MainActivity;
 import com.project.barbershop.R;
 import com.project.barbershop.SharedPreferenceManager;
 
@@ -44,7 +44,7 @@ public class LoginActivity1 extends AppCompatActivity {
                 } else {
                     if (sharedPreferenceManager.checkCredentials(email, password)) {
                         Toast.makeText(LoginActivity1.this, "Login berhasil", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity1.this, ProfileActivity1.class));
+                        startActivity(new Intent(LoginActivity1.this, MainActivity.class));
                         finish();
                     } else {
                         Toast.makeText(LoginActivity1.this, "Email atau password salah", Toast.LENGTH_SHORT).show();

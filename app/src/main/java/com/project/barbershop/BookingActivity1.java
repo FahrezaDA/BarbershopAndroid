@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class BookingActivity1 extends AppCompatActivity {
 
-    private static final String url = "http://192.168.1.9/barbershopLaravel/public/api/postBooking";
+    private static final String url = "http://192.168.1.20/barbershopLaravel/public/api/postBooking";
 
     private EditText etName, etNoTelpon, etJenisPelayanan, etHarga;
     private Button btnSubmit;
@@ -66,7 +66,7 @@ public class BookingActivity1 extends AppCompatActivity {
 
         spinner = findViewById(R.id.jam_booking);
         // Buat array opsi jam
-        String[] jamOptions = {"Jam 1", "Jam 2", "Jam 3"};
+        String[] jamOptions = {"13:00", "14:00", "15:00"};
 
 
 
@@ -179,12 +179,12 @@ public class BookingActivity1 extends AppCompatActivity {
                 case R.id.bottom_booking:
                     return true;
                 case R.id.bottom_order:
-                    startActivity(new Intent(getApplicationContext(), ListPemesananActivity.class));
+                    startActivity(new Intent(getApplicationContext(), BookingActivity.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_profile:
-                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity1.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;

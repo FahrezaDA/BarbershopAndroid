@@ -91,7 +91,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void getDataFromDatabase(String email) {
         // URL endpoint untuk mengambil data dari database
-        String url = "http://192.168.1.9/barbershopLaravel/public/api/search?email=" + email;
+        String url = "http://192.168.1.20/barbershopLaravel/public/api/search?email=" + email;
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -140,7 +140,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void updateData(String email, String nama, String noTelpon, String alamat) {
         // URL endpoint untuk mengupdate data ke database
-        String url = "http://192.168.1.9/barbershopLaravel/public/api/updateUser";
+        String url = "http://192.168.1.20/barbershopLaravel/public/api/updateUser";
 
         // Membuat objek JSON untuk mengirim data
         JSONObject requestData = new JSONObject();
