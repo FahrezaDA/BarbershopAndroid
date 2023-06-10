@@ -131,7 +131,7 @@
                 android:layout_marginStart="15dp"
                 android:background="@drawable/form"
                 android:drawableStart="@drawable/kalender"
-                android:hint="  Jam_booking"
+                android:hint="Jam_booking"
                 android:paddingLeft="15dp" />
 
         </LinearLayout>

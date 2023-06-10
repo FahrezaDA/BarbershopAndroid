@@ -35,7 +35,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.bottom_booking);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_profile);
 
         profileEmail = findViewById(R.id.profile_email);
         profileNama = findViewById(R.id.profile_nama);
