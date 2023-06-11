@@ -33,7 +33,7 @@ public class BookingActivity extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private RequestQueue requestQueue;
-    private String apiUrl = "http://192.168.1.20/barbershopLaravel/public/api/searchBooking";
+    private String apiUrl = "http://192.168.1.17/barbershopLaravel/public/api/searchBooking";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class BookingActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.bottom_booking);
 
-        dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         requestQueue = Volley.newRequestQueue(this);
 
         btnTglBookings = findViewById(R.id.btnTglBookings);
@@ -130,11 +130,13 @@ public class BookingActivity extends AppCompatActivity {
         datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 Calendar selectedCalendar = Calendar.getInstance();
-                selectedCalendar.set(year, monthOfYear, dayOfMonth);
+                selectedCalendar.set(Calendar.YEAR, year);
+                selectedCalendar.set(Calendar.MONTH, monthOfYear);
+                selectedCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                 String selectedDate = dateFormatter.format(selectedCalendar.getTime());
                 btnTglBookings.setText(selectedDate);
             }
-        }, newCalendar.get(Calendar.DAY_OF_MONTH), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.YEAR));
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
 
         datePickerDialog.show();
     }
