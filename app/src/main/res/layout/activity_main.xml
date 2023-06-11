@@ -48,11 +48,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:clickable="true"
-        android:elevation="3dp"
-        android:focusable="true"
-        app:cardCornerRadius="3dp">
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,8 +89,6 @@
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="5dp"
                     android:src="@drawable/logobar1" />
             </RelativeLayout>
 
@@ -120,10 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="95dp"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="3dp">
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -138,16 +129,14 @@
                             android:text="Smoothing"
                             android:textColor="@color/black"
                             android:textSize="15dp"
-                            tools:ignore="TextSizeCheck" />
+                            tools:ignore="TextSizeCheck"/>
 
                         <ImageView
                             android:layout_width="120dp"
                             android:layout_height="90dp"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="30dp"
-
                             android:src="@drawable/smotting" />
 
 
@@ -160,10 +149,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="95dp"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="3dp">
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -184,7 +170,6 @@
                             android:layout_width="120dp"
                             android:layout_height="90dp"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="30dp"
                             android:src="@drawable/perm" />
@@ -211,22 +196,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="95dp"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="3dp">
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="95dp"
-                        android:padding="3dp"
-                     >
+                        android:padding="3dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
-                            android:text="Gromming and Hair Tatto"
+                            android:text="Hair Tatto"
                             android:textColor="@color/black"
                             android:textSize="15dp"
                             tools:ignore="TextSizeCheck" />
@@ -235,7 +216,6 @@
                             android:layout_width="120dp"
                             android:layout_height="90dp"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="30dp"
                             android:src="@drawable/gromming" />
@@ -250,10 +230,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="95dp"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="3dp">
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -267,13 +244,12 @@
                             android:text="Black Hair Coloring"
                             android:textColor="@color/black"
                             android:textSize="15dp"
-                            tools:ignore="TextSizeCheck" />
+                            tools:ignore="TextSizeCheck"/>
 
                         <ImageView
                             android:layout_width="120dp"
                             android:layout_height="90dp"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="30dp"
                             android:src="@drawable/hairblack" />
@@ -290,7 +266,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="115dp"
                 android:layout_margin="16dp"
-                android:layout_marginLeft="16dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -298,10 +273,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="95dp"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="3dp">
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -315,13 +287,12 @@
                             android:text="Gentlement Cut"
                             android:textColor="@color/black"
                             android:textSize="15dp"
-                            tools:ignore="TextSizeCheck" />
+                            tools:ignore="TextSizeCheck"/>
 
                         <ImageView
                             android:layout_width="120dp"
                             android:layout_height="90dp"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="30dp"
                             android:src="@drawable/gentlementcut" />
@@ -336,10 +307,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="95dp"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    app:cardCornerRadius="3dp"
-                    app:cardElevation="3dp">
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -353,13 +321,12 @@
                             android:text="Kids Haircut"
                             android:textColor="@color/black"
                             android:textSize="15dp"
-                            tools:ignore="TextSizeCheck" />
+                            tools:ignore="TextSizeCheck"/>
 
                         <ImageView
                             android:layout_width="120dp"
                             android:layout_height="90dp"
                             android:layout_alignParentRight="true"
-                            android:layout_alignParentBottom="true"
                             android:layout_marginTop="20dp"
                             android:layout_marginRight="28dp"
                             android:src="@drawable/kids" />
@@ -377,16 +344,11 @@
                 android:id="@+id/bottomNavigationView"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="0dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="30dp"
                 android:background="@drawable/bottom_background"
-                android:elevation="2dp"
                 app:itemIconSize="30dp"
                 app:itemIconTint="@drawable/item_selector"
-                app:itemRippleColor="@android:color/transparent"
                 app:labelVisibilityMode="unlabeled"
                 app:menu="@menu/bottom_menu" />
 
