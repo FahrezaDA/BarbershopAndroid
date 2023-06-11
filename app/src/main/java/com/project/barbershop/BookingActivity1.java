@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class BookingActivity1 extends AppCompatActivity {
 
-    private static final String url = "http://192.168.1.12/barbershopLaravel/public/api/postBooking";
+    private static final String url = "http://192.168.1.17/barbershopLaravel/public/api/postBooking";
 
     private EditText etName, etNoTelpon, etJenisPelayanan, etHarga;
     private Button btnSubmit;
@@ -206,7 +206,7 @@ public class BookingActivity1 extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDayOfMonth) {
                         calendar.set(selectedYear, selectedMonth, selectedDayOfMonth);
-                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
                         String selectedDate = sdf.format(calendar.getTime());
                         btnTglBooking.setText(selectedDate);
                     }
