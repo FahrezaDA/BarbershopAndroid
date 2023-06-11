@@ -124,7 +124,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="100dp"
+                            android:layout_marginLeft="103dp"
                             android:layout_marginTop="5dp"
                             android:layout_below="@id/tv_jam1"
                             android:text="Status : "
@@ -218,7 +218,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="100dp"
+                            android:layout_marginLeft="103dp"
                             android:layout_marginTop="79dp"
                             android:layout_below="@id/tv_jam1"
                             android:text="Status : "
@@ -313,7 +313,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/tv_jam1"
-                            android:layout_marginLeft="100dp"
+                            android:layout_marginLeft="103dp"
                             android:layout_marginTop="79dp"
                             android:text="Status : "
                             android:textColor="@color/teal_700"
