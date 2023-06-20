@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.project.barbershop.R;
-import com.project.barbershop.SharedPreferenceManager;
+import com.project.barbershop.servis.SharedPreferenceManager;
 
 public class RegisterActivity1 extends AppCompatActivity {
     private EditText etUsername;

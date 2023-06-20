@@ -1,4 +1,4 @@
-package com.project.barbershop;
+package com.project.barbershop.servis;
 
 import android.content.Context;
 import android.content.SharedPreferences;

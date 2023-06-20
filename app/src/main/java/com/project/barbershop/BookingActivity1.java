@@ -1,45 +1,46 @@
-package com.project.barbershop;
+ package com.project.barbershop;
 
-import android.app.DatePickerDialog;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Base64;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.Toast;
+        import android.app.DatePickerDialog;
+        import android.app.ProgressDialog;
+        import android.content.Intent;
+        import android.graphics.Bitmap;
+        import android.graphics.BitmapFactory;
+        import android.net.Uri;
+        import android.os.Bundle;
+        import android.util.Base64;
+        import android.view.View;
+        import android.widget.AdapterView;
+        import android.widget.ArrayAdapter;
+        import android.widget.Button;
+        import android.widget.DatePicker;
+        import android.widget.EditText;
+        import android.widget.ImageView;
+        import android.widget.Spinner;
+        import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.annotation.Nullable;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+        import com.android.volley.Request;
+        import com.android.volley.RequestQueue;
+        import com.android.volley.Response;
+        import com.android.volley.VolleyError;
+        import com.android.volley.toolbox.StringRequest;
+        import com.android.volley.toolbox.Volley;
+        import com.google.android.material.bottomnavigation.BottomNavigationView;
+        import com.project.barbershop.apiConfig.apiConfig;
 
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+        import java.io.ByteArrayOutputStream;
+        import java.io.InputStream;
+        import java.text.SimpleDateFormat;
+        import java.util.Calendar;
+        import java.util.HashMap;
+        import java.util.Locale;
+        import java.util.Map;
 
 public class BookingActivity1 extends AppCompatActivity {
 
-    private static final String url = "http://192.168.1.17/barbershopLaravel/public/api/postBooking";
+    private static final String url = apiConfig.URL_API+"/postBooking";
 
     private EditText etName, etNoTelpon, etJenisPelayanan, etHarga;
     private Button btnSubmit;
@@ -85,19 +86,19 @@ public class BookingActivity1 extends AppCompatActivity {
 
                 switch (pilihan) {
                     case "Gentlemen Cut":
-                        harga = "Rp100.000";
+                        harga = "100000";
                         break;
                     case "Smoothing":
-                        harga = "Rp200.000";
+                        harga = "200000";
                         break;
                     case "Black Hair Coloring":
-                        harga = "Rp300.000";
+                        harga = "300000";
                         break;
                     case "Grooming and Hair Tattoo":
-                        harga = "Rp400.000";
+                        harga = "400000";
                         break;
                     case "Hair Coloring":
-                        harga = "Rp500.000";
+                        harga = "500000";
                         break;
                 }
 
@@ -173,12 +174,12 @@ public class BookingActivity1 extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
                 case R.id.bottom_booking:
                     startActivity(new Intent(getApplicationContext(), BookingActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
                 case R.id.bottom_order:
@@ -206,7 +207,8 @@ public class BookingActivity1 extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDayOfMonth) {
                         calendar.set(selectedYear, selectedMonth, selectedDayOfMonth);
-                        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+
+                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         String selectedDate = sdf.format(calendar.getTime());
                         btnTglBooking.setText(selectedDate);
                     }

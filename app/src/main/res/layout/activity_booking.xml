@@ -100,11 +100,11 @@
                             android:textSize="18dp" />
 
                         <ImageView
-                            android:layout_width="120dp"
+                            android:layout_width="90dp"
                             android:layout_height="80dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginLeft="5dp"
-                            android:src="@drawable/perm" />
+                            android:src="@drawable/logo" />
 
                         <Button
                             android:id="@+id/btnSatu"
@@ -122,7 +122,7 @@
                             android:layout_below="@id/tv_jam1"
                             android:text="Status : "
                             android:id="@+id/tv_statuss1"
-                            android:textColor="@color/teal_700"
+                            android:textColor="@color/purple_200"
                             android:textSize="14dp"
                             tools:ignore="TextSizeCheck" />
                         <TextView
@@ -193,11 +193,11 @@
                             tools:ignore="TextSizeCheck" />
 
                         <ImageView
-                            android:layout_width="120dp"
+                            android:layout_width="90dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            android:src="@drawable/perm" />
+                            android:src="@drawable/logobar1" />
 
                         <Button
                             android:id="@+id/btnDua"
@@ -216,7 +216,7 @@
                             android:layout_below="@id/tv_jam1"
                             android:text="Status : "
                             android:id="@+id/tv_statuss2"
-                            android:textColor="@color/teal_700"
+                            android:textColor="@color/purple_200"
                             android:textSize="14dp"
                             tools:ignore="NotSibling,TextSizeCheck" />
                         <TextView
@@ -286,11 +286,11 @@
                             tools:ignore="TextSizeCheck" />
 
                         <ImageView
-                            android:layout_width="120dp"
+                            android:layout_width="90dp"
                             android:layout_height="80dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginLeft="5dp"
-                            android:src="@drawable/perm" />
+                            android:src="@drawable/logo" />
 
                         <Button
                             android:id="@+id/btnTiga"
@@ -309,7 +309,7 @@
                             android:layout_marginLeft="103dp"
                             android:layout_marginTop="60dp"
                             android:text="Status : "
-                            android:textColor="@color/teal_700"
+                            android:textColor="@color/purple_200"
                             android:textSize="14dp"
                             tools:ignore="DuplicateIds,NotSibling,TextSizeCheck" />
 

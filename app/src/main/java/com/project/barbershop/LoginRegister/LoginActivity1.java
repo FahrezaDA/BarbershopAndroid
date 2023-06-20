@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.project.barbershop.MainActivity;
 import com.project.barbershop.R;
-import com.project.barbershop.SharedPreferenceManager;
+import com.project.barbershop.servis.SharedPreferenceManager;
 
 public class LoginActivity1 extends AppCompatActivity {
     private EditText etEmail;

@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.project.barbershop.servis.SharedPreferenceManager;
 
 public class ProfileActivity1 extends AppCompatActivity {
     private TextView tvUsername;
@@ -58,18 +59,18 @@ public class ProfileActivity1 extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
                 case R.id.bottom_booking:
                     startActivity(new Intent(getApplicationContext(), BookingActivity1.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
 
                 case R.id.bottom_order:
                     startActivity(new Intent(getApplicationContext(), BookingActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
                 case R.id.bottom_profile:

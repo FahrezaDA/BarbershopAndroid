@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.project.barbershop.apiConfig.apiConfig;
 
 import org.json.JSONObject;
 
@@ -33,7 +34,7 @@ public class BookingActivity extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private RequestQueue requestQueue;
-    private String apiUrl = "http://192.168.1.17/barbershopLaravel/public/api/searchBooking";
+    private String apiUrl = apiConfig.URL_API+"/searchBooking";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +72,7 @@ public class BookingActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.bottom_booking);
 
-        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
         requestQueue = Volley.newRequestQueue(this);
 
         btnTglBookings = findViewById(R.id.btnTglBookings);
@@ -97,7 +98,7 @@ public class BookingActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
 
