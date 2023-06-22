@@ -25,10 +25,15 @@
         import com.android.volley.RequestQueue;
         import com.android.volley.Response;
         import com.android.volley.VolleyError;
+        import com.android.volley.toolbox.JsonObjectRequest;
         import com.android.volley.toolbox.StringRequest;
         import com.android.volley.toolbox.Volley;
         import com.google.android.material.bottomnavigation.BottomNavigationView;
         import com.project.barbershop.apiConfig.apiConfig;
+        import com.project.barbershop.servis.SharedPreferenceManager;
+
+        import org.json.JSONException;
+        import org.json.JSONObject;
 
         import java.io.ByteArrayOutputStream;
         import java.io.InputStream;
@@ -51,7 +56,8 @@ public class BookingActivity1 extends AppCompatActivity {
     private Spinner spinner2;
     String encodeImageString;
     private Calendar calendar;
-
+    private String email;
+    private SharedPreferenceManager sharedPreferenceManager;
     Bitmap bitmap;
     ImageView img;
 
@@ -145,7 +151,10 @@ public class BookingActivity1 extends AppCompatActivity {
         btnTglBooking = findViewById(R.id.btnTglBooking);
         choose = findViewById(R.id.choose);
         ProgressDialog progressDialog;
+        sharedPreferenceManager = new SharedPreferenceManager(this);
+        email = sharedPreferenceManager.getEmail();
 
+        fetchProfile();
         btnTglBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -186,7 +195,7 @@ public class BookingActivity1 extends AppCompatActivity {
 
                     return true;
                 case R.id.bottom_profile:
-                    startActivity(new Intent(getApplicationContext(), ProfileActivity1.class));
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
@@ -194,6 +203,36 @@ public class BookingActivity1 extends AppCompatActivity {
             }
             return false;
         });
+    }
+
+    private void fetchProfile() {
+        String url = apiConfig.URL_API + "/profile?email=" + email;
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            String username = response.getString("nama");
+                            String noTelepon = response.getString("no_telepon");
+
+                            etName.setText("  " + username);
+                            etNoTelpon.setText(" " + noTelepon);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(BookingActivity1.this, "Failed to parse profile data", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                        Toast.makeText(BookingActivity1.this, "Failed to fetch profile", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        Volley.newRequestQueue(this).add(request);
     }
 
     private void showDatePicker() {

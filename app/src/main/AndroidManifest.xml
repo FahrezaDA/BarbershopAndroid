@@ -66,10 +66,11 @@
         <activity android:name=".LoginRegister.RegisterActivity" />
 <!--        <activity android:name=".servis.MyServerRequest"/>-->
         <activity android:name=".ProfileActivity"/>
+        <activity android:name=".MainActivity"/>
 <!--        <activity android:name=".ListPemesananActivity"/>-->
-<!--        <activity android:name=".BookingActivity1"/>-->
-<!--        <activity android:name=".BookingActivity"/>-->
-<!--        <activity android:name=".booking_test"/>-->
+        <activity android:name=".BookingActivity1"/>
+        <activity android:name=".BookingActivity"/>
+        <activity android:name=".booking_test"/>
         <activity android:name=".LoginRegister.LoginActivity" />
     </application>
 

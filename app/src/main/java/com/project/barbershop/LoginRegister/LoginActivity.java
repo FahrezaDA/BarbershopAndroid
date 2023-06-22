@@ -15,7 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.project.barbershop.ProfileActivity;
+import com.project.barbershop.MainActivity;
 import com.project.barbershop.R;
 import com.project.barbershop.apiConfig.apiConfig;
 import com.project.barbershop.servis.SharedPreferenceManager;
@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                                 sharedPreferenceManager.setEmail(userObject.getString("email"));
 
                                 // Pindah ke halaman ProfileActivity setelah login berhasil
-                                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
                             } else {
