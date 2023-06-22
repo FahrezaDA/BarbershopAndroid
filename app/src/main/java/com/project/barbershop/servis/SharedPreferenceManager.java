@@ -10,6 +10,7 @@ public class SharedPreferenceManager {
     private static final String KEY_ALAMAT = "alamat";
     private static final String KEY_NO_TELEPON = "no_telepon";
     private static final String KEY_PASSWORD = "password";
+    private static final String KEY_ACCESS_TOKEN = "access_token";
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -53,6 +54,11 @@ public class SharedPreferenceManager {
         editor.apply();
     }
 
+    public void setAccessToken(String accessToken) {
+        editor.putString(KEY_ACCESS_TOKEN, accessToken);
+        editor.apply();
+    }
+
     public String getUsername() {
         return sharedPreferences.getString(KEY_USERNAME, "");
     }
@@ -73,6 +79,10 @@ public class SharedPreferenceManager {
         return sharedPreferences.getString(KEY_PASSWORD, "");
     }
 
+    public String getAccessToken() {
+        return sharedPreferences.getString(KEY_ACCESS_TOKEN, "");
+    }
+
     public boolean isLoggedIn() {
         return sharedPreferences.contains(KEY_USERNAME) && sharedPreferences.contains(KEY_EMAIL) && sharedPreferences.contains(KEY_PASSWORD);
     }
@@ -89,6 +99,7 @@ public class SharedPreferenceManager {
         editor.remove(KEY_PASSWORD);
         editor.remove(KEY_ALAMAT);
         editor.remove(KEY_NO_TELEPON);
+        editor.remove(KEY_ACCESS_TOKEN);
         editor.apply();
     }
 }

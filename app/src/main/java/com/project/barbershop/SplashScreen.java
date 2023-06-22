@@ -7,7 +7,7 @@ import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.project.barbershop.LoginRegister.LoginActivity1;
+import com.project.barbershop.LoginRegister.LoginActivity;
 
 public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstance){
@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(), LoginActivity1.class));
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
             }
         }, 3000L);

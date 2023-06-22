@@ -110,7 +110,7 @@
                             android:id="@+id/btnSatu"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:layout_marginLeft="220dp"
+                            android:layout_marginLeft="210dp"
                             android:layout_marginTop="20dp"
                             android:text="Booking" />
 
@@ -203,7 +203,7 @@
                             android:id="@+id/btnDua"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:layout_marginLeft="220dp"
+                            android:layout_marginLeft="210dp"
                             android:layout_marginTop="20dp"
                             android:text="Booking"
                             tools:ignore="DuplicateIds" />
@@ -296,7 +296,7 @@
                             android:id="@+id/btnTiga"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:layout_marginLeft="220dp"
+                            android:layout_marginLeft="210dp"
                             android:layout_marginTop="20dp"
                             android:text="Booking"
                             tools:ignore="DuplicateIds" />
@@ -342,6 +342,7 @@
                 android:background="@drawable/bottom_background"
                 app:itemIconSize="30dp"
                 app:itemIconTint="@drawable/item_selector"
+                app:labelVisibilityMode="unlabeled"
                 app:menu="@menu/bottom_menu" />
         </LinearLayout>
 

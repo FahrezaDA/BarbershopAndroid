@@ -2,83 +2,79 @@ package com.project.barbershop;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.project.barbershop.apiConfig.apiConfig;
+import com.project.barbershop.servis.SharedPreferenceManager;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ProfileActivity extends AppCompatActivity {
+    private TextView tvUsername;
+    private TextView tvEmail;
+    private TextView tvAlamat;
+    private TextView tvNoTelepon;
+    private Button btnUpdate;
 
-
-    private static final String TAG = ProfileActivity.class.getSimpleName();
-    private EditText profileEmail, profileNama, profileNoTelpon, profileAlamat;
-    private Button btnSearch, btnUpdate;
+    private SharedPreferenceManager sharedPreferenceManager;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.bottom_booking);
-
-        profileEmail = findViewById(R.id.profile_email);
-        profileNama = findViewById(R.id.profile_nama);
-        profileNoTelpon = findViewById(R.id.profile_noTelepon);
-        profileAlamat = findViewById(R.id.profile_alamat);
-
+        tvUsername = findViewById(R.id.profile_nama);
+        tvEmail = findViewById(R.id.profile_email);
+        tvAlamat = findViewById(R.id.profile_alamat);
+        tvNoTelepon = findViewById(R.id.profile_noTelepon);
         btnUpdate = findViewById(R.id.btnUpdate);
 
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = profileEmail.getText().toString().trim();
-                getDataFromDatabase(email);
-            }
-        });
+        sharedPreferenceManager = new SharedPreferenceManager(this);
+
+        // Mendapatkan email pengguna dari SharedPreferenceManager atau sumber lainnya
+        email = sharedPreferenceManager.getEmail();
+
+        fetchProfile();
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = profileEmail.getText().toString().trim();
-                String nama = profileNama.getText().toString().trim();
-                String noTelpon = profileNoTelpon.getText().toString().trim();
-                String alamat = profileAlamat.getText().toString().trim();
-                updateData(email, nama, noTelpon, alamat);
+                updateProfile();
             }
         });
 
-        bottomNavigationView.setOnItemSelectedListener(item -> {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_profile);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
                 case R.id.bottom_booking:
                     startActivity(new Intent(getApplicationContext(), BookingActivity1.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
 
                 case R.id.bottom_order:
-                    startActivity(new Intent(getApplicationContext(), booking_test.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    startActivity(new Intent(getApplicationContext(), BookingActivity.class));
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                     return true;
                 case R.id.bottom_profile:
@@ -89,95 +85,75 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-    private void getDataFromDatabase(String email) {
-        // URL endpoint untuk mengambil data dari database
-        String url = "http://192.168.1.20/barbershopLaravel/public/api/search?email=" + email;
+    private void fetchProfile() {
+        String url = apiConfig.URL_API + "/profile?email=" + email;
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            boolean success = response.getBoolean("success");
-                            if (success) {
-                                JSONArray data = response.getJSONArray("data");
-                                if (data.length() > 0) {
-                                    JSONObject userData = data.getJSONObject(0);
-                                    // Mendapatkan data dari response JSON
-                                    String nama = userData.getString("nama");
-                                    String noTelpon = userData.getString("no_telepon");
-                                    String alamat = userData.getString("alamat");
+                            String username = response.getString("nama");
+                            String email = response.getString("email");
+                            String alamat = response.getString("alamat");
+                            String noTelepon = response.getString("no_telepon");
 
-                                    // Menampilkan data pada masing-masing EditText
-                                    profileNama.setText(nama);
-                                    profileNoTelpon.setText(noTelpon);
-                                    profileAlamat.setText(alamat);
-                                } else {
-                                    Toast.makeText(getApplicationContext(), "Data not found", Toast.LENGTH_SHORT).show();
-                                }
-                            } else {
-                                String message = response.getString("message");
-                                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-                            }
+                            tvUsername.setText("  " + username);
+                            tvEmail.setText("  " + email);
+                            tvAlamat.setText("  " + alamat);
+                            tvNoTelepon.setText(" " + noTelepon);
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            Toast.makeText(ProfileActivity.this, "Failed to parse profile data", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e(TAG, "Error: " + error.getMessage());
-                        Toast.makeText(getApplicationContext(), "Error fetching data", Toast.LENGTH_SHORT).show();
+                        error.printStackTrace();
+                        Toast.makeText(ProfileActivity.this, "Failed to fetch profile", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-        // Menambahkan request ke antrian request Volley
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjectRequest);
+        Volley.newRequestQueue(this).add(request);
     }
 
+    private void updateProfile() {
+        String url = apiConfig.URL_API + "/update_profile";
 
-    private void updateData(String email, String nama, String noTelpon, String alamat) {
-        // URL endpoint untuk mengupdate data ke database
-        String url = "http://192.168.1.20/barbershopLaravel/public/api/updateUser";
-
-        // Membuat objek JSON untuk mengirim data
-        JSONObject requestData = new JSONObject();
+        JSONObject requestObject = new JSONObject();
         try {
-            requestData.put("email", email);
-            requestData.put("nama", nama);
-            requestData.put("no_telepon", noTelpon);
-            requestData.put("alamat", alamat);
+            requestObject.put("email", email);
+            // Mendapatkan data profil yang ingin diperbarui dari input pengguna
+            String updatedUsername = tvUsername.getText().toString().trim();
+            String updatedAlamat = tvAlamat.getText().toString().trim();
+            String updatedNoTelepon = tvNoTelepon.getText().toString().trim();
+            requestObject.put("nama", updatedUsername);
+            requestObject.put("alamat", updatedAlamat);
+            requestObject.put("no_telepon", updatedNoTelepon);
         } catch (JSONException e) {
             e.printStackTrace();
+            Toast.makeText(ProfileActivity.this, "Failed to create update request", Toast.LENGTH_SHORT).show();
+            return;
         }
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, url, requestData,
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.PUT, url, requestObject,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        try {
-                            boolean success = response.getBoolean("success");
-                            String message = response.getString("message");
-                            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+                        Toast.makeText(ProfileActivity.this, "Update berhasil", Toast.LENGTH_SHORT).show();
+                        fetchProfile(); // Refresh tampilan dengan data yang baru saja diperbarui
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e(TAG, "Error: " + error.getMessage());
-                        Toast.makeText(getApplicationContext(), "Error updating data", Toast.LENGTH_SHORT).show();
+                        error.printStackTrace();
+                        Toast.makeText(ProfileActivity.this, "Failed to update profile", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-        // Menambahkan request ke antrian request Volley
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonObjectRequest);
+        Volley.newRequestQueue(this).add(request);
     }
-
-
 }

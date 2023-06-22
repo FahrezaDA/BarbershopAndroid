@@ -15,17 +15,21 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.project.barbershop.BookingActivity1;
-import com.project.barbershop.MainActivity;
+import com.project.barbershop.ProfileActivity;
 import com.project.barbershop.R;
+import com.project.barbershop.apiConfig.apiConfig;
+import com.project.barbershop.servis.SharedPreferenceManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final String url = "http://192.168.1.20/barbershopLaravel/public/api/login";
-    private  Button btnRegister;
-   private  Button btnLogin;
+    private static final String URL_LOGIN = apiConfig.URL_API + "/login";
+    private Button btnRegister;
+    private Button btnLogin;
     private EditText etEmail;
     private EditText etPassword;
 
@@ -34,12 +38,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btnRegister=findViewById(R.id.btnRegister);
-        btnLogin=findViewById(R.id.btnLogin);
+        btnRegister = findViewById(R.id.btnRegister);
+        btnLogin = findViewById(R.id.btnLogin);
         etEmail = findViewById(R.id.email);
         etPassword = findViewById(R.id.password);
 
-        Button btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, BookingActivity1.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -58,42 +61,55 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser() {
-
         final String email = etEmail.getText().toString().trim();
         final String password = etPassword.getText().toString().trim();
 
-
-        // Buat request POST ke URL REGISTER_URL
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        // Tanggapan dari server jika pendaftaran berhasil
-                        Toast.makeText(LoginActivity.this,"Login berhasil", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+
+                            if (success) {
+                                String accessToken = jsonObject.getJSONObject("data").getString("access_token");
+                                JSONObject userObject = jsonObject.getJSONObject("data").getJSONObject("user");
+
+                                // Simpan data pengguna ke SharedPreferenceManager
+                                SharedPreferenceManager sharedPreferenceManager = new SharedPreferenceManager(LoginActivity.this);
+                                sharedPreferenceManager.setAccessToken(accessToken);
+                                sharedPreferenceManager.setEmail(userObject.getString("email"));
+
+                                // Pindah ke halaman ProfileActivity setelah login berhasil
+                                Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                String message = jsonObject.getString("message");
+                                Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(LoginActivity.this, "Failed to parse login response", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        // Tanggapan dari server jika terjadi kesalahan
                         Toast.makeText(LoginActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
-
                 params.put("email", email);
                 params.put("password", password);
-
                 return params;
             }
         };
 
-        // Buat antrian permintaan Volley dan tambahkan permintaan ke antrian
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }

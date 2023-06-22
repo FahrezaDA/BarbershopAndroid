@@ -16,12 +16,13 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.project.barbershop.R;
+import com.project.barbershop.apiConfig.apiConfig;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
-    private static final String REGISTER_URL = "http://192.168.1.9/barbershopLaravel/public/api/register";
+    private static final String REGISTER_URL = apiConfig.URL_API+"/register";
 
     private EditText etname;
     private EditText etEmail;
